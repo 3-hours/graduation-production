@@ -1,0 +1,280 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>BNUZ-天空</title>
+  <meta name="keywords" content="北师珠,北京师范大学珠海分校 " />
+  <meta name="description" content="北师珠,北京师范大学珠海分校" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+  <style>
+    * {
+      margin: 0; padding: 0;
+    }
+
+    html, body {
+      width: 100%;
+      height: 1500px;
+      overflow: hidden;
+    }
+
+    #container {
+      overflow: hidden;
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+    }
+
+    #background_video {
+      position: absolute;
+
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+
+      object-fit: cover;
+      height: 100%; width: 100%;
+    }
+
+    #video_cover {
+      position: absolute;
+
+      width: 100%; height: 100%;
+
+      background: url('img/video_cover.jpeg') no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+  
+
+    @media (min-width: 768px) {
+      #video_controls {
+        display: none;
+      }
+    }
+
+    /* Demo page specific styles */
+
+    body {
+      text-align: center;
+      font-family: 'proxima-nova', Helvetica;
+    }
+
+    #container {
+      height: 100%;
+    }
+
+    #overlay {
+      position: absolute;
+      top: 0; right: 0; left: 0; bottom: 0;
+      background: rgba(0,0,0,0.5);
+    }
+
+    #main_content {
+      z-index: 2;
+      /*background-color: green;*/
+      position: relative;
+      display: inline-block;
+      -webkit-user-select:none;
+      /* Vertical center */
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    #main_content h1 {
+      text-transform: uppercase;
+      font-weight: 600;
+      font-family: 'proxima-nova-condensed', Helvetica;
+      color: #fff;
+      font-size: 35px;
+    }
+
+    #main_content .sub_head {
+      color: rgba(255,255,255,0.5);
+      font-size: 18px;
+    }
+
+    #main_content .info {
+      color: rgba(255,255,255,0.5);
+      font-size: 12px;
+      margin-top: 10px;
+    }
+    #left {
+      width: 90%;
+      margin:10% 5%;
+      height: auto;
+      /*background-color: pink;*/
+      border-radius: 10px;
+      position: absolute;
+      font-size: 16px;
+      font-weight: bolder;
+      background-image: -webkit-linear-gradient(92deg,#009688,#bb1566);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 0.2em;
+      line-height: 3rem;
+    }
+     #right {
+      width: 100%;
+      height:auto;
+      background-color: rgba(255,255,255,0.1);
+      padding:1% 0;
+      position: absolute;
+      bottom: 0;
+      left:0;
+    }
+    #right .content {
+      width: 12%;
+      height: auto;
+      margin-right: 10%;
+      float: left;
+    }
+    #right .content img {
+      width: 100%;
+      height: auto;
+    }
+    #right .content:first-child {
+     margin-left: 10%;
+    }
+    #right .content:last-child {
+     margin-right: 0%;
+    }
+    
+    #popBox {
+      display: none;
+      position: fixed;
+      background-color: rgba(0,0,0,0.5);
+      left:0;
+      top:0;
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+    }
+    #popBox div {
+      position: absolute;
+      width: 100%;
+      margin: 0 auto;
+      max-width: 300px;
+      background-color: #fff;
+      padding: 10px;
+      z-index: 11;
+    }
+    #popBox div img {
+      width: 100%;
+      height: auto;
+    }
+
+    @media screen and (max-width:414px) {
+      #right {
+        padding:5% 0;
+      }
+       #right .content {
+      width: 35%;
+      height: auto;
+      margin-right: 10%;
+      float: left;
+    }
+      #right .content img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 3%;
+    }
+    #right .content:first-child {
+     margin-left: 10%;
+    }
+    #right .content:nth-child(3) {
+     margin-left: 10%;
+    }
+    #left {
+      width: 90%;
+      margin:20% 5%;
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      line-height: 2rem;
+     }
+    }
+
+  </style>
+</head>
+<body>
+  <div id="container">
+    <video id="background_video" loop muted></video>
+    <div id="video_cover"></div>
+    <div id="overlay"></div>
+     <div id="left">
+                    <p>还记得吗? 开学那天，我们脸上的懵懂和眼中的向往;</p>
+
+                    还记得吗?我们第一次穿上军装的欣喜若狂；<br/>
+
+                    还记得吗?军训期间，我们身上的汗水和脸上的笑容；<br/>
+
+                    还记得吗?迎新晚会上，我们高亢的歌声和忘我的狂欢；<br/>
+
+                    那些年我们一起逃过的线性代数棵。<br/>
+                    现在却再也回不去了。<br/>
+                    这是我们的相识，我们共同珍藏。<br/>
+     </div>
+    <section id="main_content">
+      <div id="head">
+        <h1>BNUZ</h1>
+        <p class="sub_head">最美的年华</p>
+        <p class="info">遇见最美的天空</p>
+      </div> 
+    </section>
+    <div id="right">
+      <div class="content">
+          <img src="img/bnuz1.jpg" alt="">
+      </div>
+      <div class="content">
+          <img src="img/bnuz2.jpg" alt="">
+      </div>
+      <div class="content">
+          <img src="img/bnuz3.jpg" alt="">
+      </div>
+      <div class="content">
+          <img src="img/bnuz4.jpg" alt="">
+      </div>
+  <div id="popBox">
+    <div>
+      <!-- <img src="img/bnuz1.jpg" alt=""> -->
+    </div>
+  </div>
+  </div>
+
+  <script src="static/bideo.js"></script>
+  <script src="static/main.js"></script>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript">
+    var left = document.getElementById('left');
+    var str1= left.innerText.split('');
+    var i = 0;
+    left.innerHTML='';
+    var str="";
+    setInterval(function(){
+        if(i <str1.length) {
+          str+=str1[i];
+          left.innerHTML=str+"<span>|</span>";
+          i++;
+        }
+      },500)
+
+    var imgSrc = ["bnuz1.jpg","bnuz2.jpg","bnuz3.jpg","bnuz4.jpg"];
+
+    $("#right .content ").on("click", function() {
+        var index = $(this).index();
+        console.log(index);
+        $("#popBox div").html('<img src="img/'+imgSrc[index]+'">');
+         $("#popBox").show();
+        $("#popBox div").css({
+          left:(window.innerWidth - $("#popBox div").outerWidth())/2,
+          top:(window.innerHeight - $("#popBox div").outerHeight())/2,
+        })
+    })
+    $("#popBox div").on("click", function(e) {
+        e.stopPropagation();
+      })
+      $("#popBox").on("click", function() {
+        $(this).hide();
+      })
+  </script>
+</body>
+</html>

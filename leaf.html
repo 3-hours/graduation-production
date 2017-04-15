@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	<title>BNUZ-青枝绿叶</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+		}
+		html,body {
+			height: 100%;
+			background: url(img/bg.jpg) no-repeat;
+			background-size: cover;
+		}
+		body {
+			text-align: center;
+			position: relative;
+		}
+		.iimg {
+			margin:10% auto;
+		}
+		.pimg {
+			position: absolute;
+			display: none;
+		}
+		.pimg:nth-child(1) {
+			top:0;
+			left:0;
+		}
+		.pimg:nth-child(2) {
+			bottom:0;
+			right:0;
+		}
+		.pimg:nth-child(3) {
+			top:0;
+			right:0;
+		}
+		.pimg:nth-child(4) {
+			top:20%;
+			right:10%;
+		}
+		.pimg:nth-child(5) {
+			top:10%;
+			left:10%;
+		}
+		.pimg:nth-child(6) {
+			bottom:20%;
+			right:10%;
+		}
+
+		.pimg:nth-child(7) {
+			top:5%;
+			right:10%;
+		}
+		.pimg:nth-child(8) {
+			bottom:0%;
+			left:10%;
+		}
+		.pimg:nth-child(9) {
+			top:30%;
+			left:17%;
+		}
+		.pimg:nth-child(10) {
+			top:50%;
+			left:10%;
+		}
+		
+		.pimg:nth-child(11) {
+			top:41%;
+			right:10%;
+		}
+		.pimg:nth-child(12) {
+			bottom:45%;
+			left:25%;
+		}
+		.pimg:nth-child(13) {
+			top:50%;
+			left:10%;
+		}
+		.pimg:nth-child(14) {
+			top:90%;
+			left:10%;
+		}
+		.pimg:nth-child(15) {
+			bottom:80%;
+			left:10%;
+		}
+		.pimg:nth-child(16) {
+			top:50%;
+			left:80%;
+		}
+		.pimg:nth-child(16) {
+			top:90%;
+			left:50%;
+		}
+	</style>
+</head>
+<body>
+	<img src="img/publicfoldersunset.svg"  alt="" class="iimg">
+	<div class="box">
+		<img src="img/img_01.png" class="pimg" alt="左上">
+
+		<img src="img/img_07.png" class="pimg" alt="右下">
+
+		<img src="img/plam1-top.png" class="pimg" alt="">
+
+		<img src="img/element_1.png" class="pimg" alt="">
+		<img src="img/element_2.png" class="pimg" alt="">
+		<img src="img/element_3.png" class="pimg" alt="">
+		
+		<img src="img/element_11.png" class="pimg" alt="">
+		<img src="img/element_22.png" class="pimg" alt="">
+		<img src="img/element_33.png" class="pimg" alt="">
+		<img src="img/element_44.png" class="pimg" alt="">
+
+		<img src="img/img_leaf05.png" class="pimg" alt="">
+		<img src="img/img_leaf06.png" class="pimg" alt="">
+		<img src="img/img_leaf07.png" class="pimg" alt="">
+		<img src="img/img_leaf08.png" class="pimg" alt="">
+		<img src="img/img_leaf09.png" class="pimg" alt="">
+		<img src="img/img_leaf10.png" class="pimg" alt="">
+		<img src="img/img_leaf11.png" class="pimg" alt="">
+	</div>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript">
+		// $(function() {
+			var pic = $(".box img");
+			var i=0;
+			var timer=setInterval(function(){
+				if(i==pic.length) clearInterval(timer);
+				$(pic[i]).fadeIn("slow","linear");
+				i++;
+			},400);
+		// })
+	</script>
+</body>
+</html>

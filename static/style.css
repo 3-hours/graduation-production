@@ -1,0 +1,710 @@
+@charset "utf-8";
+
+/*--------------------------------
+ *initialize
+ */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+body {
+    line-height:1;
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+nav ul {
+    list-style:none;
+}
+blockquote, q {
+    quotes:none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+del {
+    text-decoration: line-through;
+}
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+input, select {
+    vertical-align:middle;
+}
+ul, ol {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+/*-------------------------------------------
+ *layout
+ */
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url(../img/common/bg.png);
+  -webkit-text-size-adjust: 100%;
+}
+
+body:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 30px;
+  background: url(../img/common/flag.png) repeat-x left top;
+}
+
+#wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-width: 1158px;
+  min-height: 690px;
+  overflow: hidden;
+}
+
+#sun {
+  position: absolute;
+  top: 10%;
+  left: 85%;
+  width: 89px;
+  height: 76px;
+  background: url(../img/common/sun.png) no-repeat;
+}
+
+#rainbow {
+  position: absolute;
+  bottom: 24%;
+  left: -195px;
+  width: 754px;
+  height: 445px;
+  background: url(../img/top/rainbow.png) no-repeat;
+}
+
+#cloud {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1158px;
+  height: 800px;
+  margin: -400px 0 0 -579px;
+}
+
+#cloud img {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#earth-field {
+  position: absolute;
+  bottom: -277px;
+  left: 50%;
+  width: 1200px;
+  height: 277px;
+  margin: 0 0 0 -600px;
+}
+
+#earth-field .bg {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 277px;
+  background: url(../img/connect/bg.png) no-repeat;
+}
+
+#earth-field .earth {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 277px;
+  background: url(../img/connect/earth.png) no-repeat;
+}
+
+#background {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#mount {
+  position: absolute;
+  bottom: 23%;
+  left: 0;
+  width: 100%;
+  height: 239px;
+  background: url(../img/common/mount.png) repeat-x left bottom;
+}
+
+#building {
+  position: absolute;
+  bottom: 22.5%;
+  left: 0;
+  overflow: hidden;
+}
+
+#building img {
+  float: left;
+}
+
+#ground {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 24%;
+}
+
+#ground .ground-top {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: url(../img/common/ground-top.png) repeat-x;
+}
+
+#ground .ground-repeat {
+  width: 100%;
+  height: 100%;
+  background: url(../img/common/ground.png) repeat left bottom;
+}
+
+#thread-field {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 0;
+  height: 800px;
+  margin: -400px 0 0;
+  overflow: hidden;
+}
+
+#thread-field div {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4000px;
+  height: 800px;
+}
+
+#thread-field .thread1 {
+  width: 1644px;
+  background: url(../img/top/thread.png) no-repeat 0 210px;
+}
+
+#thread-field .thread2 {
+  background: url(../img/why-connection/thread.png) no-repeat 0 210px;
+}
+
+#thread-field .thread3 {
+  background: url(../img/common/thread.png) no-repeat 0 210px;
+}
+
+#thread-field .thread4 {
+  background: url(../img/common/thread.png) no-repeat 0 210px;
+}
+
+#thread-field .thread5 {
+  background: url(../img/connect/thread.png) no-repeat 0 247px;
+}
+
+#humans {
+  position: absolute;
+  bottom: 79px;
+  left: 50%;
+  width: 1158px;
+  height: 100%;
+  margin: 0 0 0 -579px;
+}
+
+#humans div {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#humans div img {
+  display:none;
+  position: absolute;
+}
+
+#humans .top .bicycle {
+  bottom: 8%;
+  left: 412px;
+}
+
+#humans .top .human1 {
+  bottom: 5%;
+  left: 223px;
+}
+
+#humans .top .human2 {
+  bottom: 5%;
+  right: 175px;
+}
+
+#humans .why-connection img {
+  bottom: 4%;
+}
+
+#humans .why-connection .human1,
+#humans .why-connection .human3 {
+  left: 244px;
+}
+
+#humans .why-connection .human2 {
+  right: 208px;
+}
+
+#humans .why-connection .human1 {
+  z-index: 5;
+}
+
+#humans .our-mission .human1 {
+  bottom: 5%;
+  left: 270px;
+}
+
+#humans .our-mission .human2 {
+  bottom: 4%;
+  right: 157px;
+}
+
+#humans .visible-connection img {
+  bottom: 5%;
+}
+
+#humans .visible-connection .human1 {
+  left: 266px;
+}
+
+#humans .visible-connection .human2 {
+  right: 100px;
+}
+
+#humans .visible-connection .human3 {
+  right: 385px;
+}
+
+#humans .connect .human1 {
+  bottom: 50px;
+  left: 200px;
+}
+
+#humans .connect .human2 {
+  bottom: 105px;
+  left: 370px;
+  z-index: 600;
+}
+
+#humans .connect .human3 {
+  bottom: -6px;
+  left: -18px;
+}
+
+#humans .connect .human4 {
+  bottom: 55px;
+  right: 200px;
+  z-index: 400;
+}
+
+#humans .connect .human5 {
+  bottom: 94px;
+  right: 340px;
+}
+
+#humans .connect .human6 {
+  bottom: -8px;
+  right: 5px;
+  z-index: 500;
+}
+
+#arrow-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#arrow-button ul {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 41px;
+  margin: -20px 0 0;
+}
+
+#arrow-button ul .back {
+  float: left;
+  margin: 0 0 0 10px;
+}
+
+#arrow-button ul .forward {
+  float: right;
+  margin: 0 10px 0 0;
+}
+
+#main-contents {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1000px;
+  height: 800px;
+  margin: -400px 0 0 -486px;
+}
+
+#main-contents > div {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 720px;
+}
+
+#main-contents > div .stars {
+  display: none;
+  position: absolute;
+}
+
+#main-contents .contents {
+  display: none;
+  position: relative;
+}
+
+#main-contents .contents h1,
+#main-contents .contents .button {
+  text-align: center;
+}
+
+#main-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 79px;
+  background: url(../img/common/green.png) repeat-x left bottom;
+}
+
+#main-footer .footer-inner {
+  width: 1100px;
+  margin: 0 auto;
+  padding: 17px 0 0;
+}
+
+#main-footer .footer-inner h1 {
+  float: left;
+  margin: 0 36px 0 0;
+  padding: 7px 0 0;
+}
+
+#main-footer #global-nav {
+  float: left;
+  width: 914px;
+  overflow: hidden;
+}
+
+#main-footer #global-nav li {
+  float: left;
+}
+
+#main-footer .contents {
+  float: left;
+  width: 142px;
+  padding: 2px 0 0;
+  text-align: right;
+}
+
+#main-footer .contents .links {
+  width: 142px;
+  margin: 0 0 9px;
+  padding: 0 0 0 40px;
+  overflow: hidden;
+}
+
+#main-footer .contents .links li {
+  float: left;
+}
+
+#main-footer .contents .links .l-margin {
+  margin: 0 32px 0 0;
+  padding: 6px 0 0;
+}
+
+#main-footer .contents .links .s-margin {
+  margin: 0 4px 0 0;
+}
+
+#main-footer .contents .copyright {
+  color: #ffffff;
+  font-size: 9px;
+}
+
+/*---------------------------------------------------
+ *top
+ */
+
+#top .stars {
+  top: 143px;
+  left: 168px;
+  width: 637px;
+  height: 199px;
+  background: url(../img/top/stars.png) no-repeat;
+}
+
+#top .opening {
+  display: none;
+  padding: 156px 0 0;
+  text-align: center;
+}
+
+#top .contents {
+  display: none;
+  padding: 180px 0 0;
+}
+
+#top .contents .icons {
+  position: absolute;
+  top: 13px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#top .contents .icons li {
+  display: none;
+  position: absolute;
+}
+
+#top .contents .icons .icon1 {
+  top: 50px;
+  left: 250px;
+}
+
+#top .contents .icons .icon2 {
+  bottom: -80px;
+  left: 384px;
+}
+
+#top .contents .icons .icon3 {
+  bottom: -56px;
+  right: -18px;
+}
+
+#top .contents .icons .icon4 {
+  top: 52px;
+  right: 230px;
+}
+
+#top .contents .icons .icon5 {
+  bottom: 6px;
+  left: 158px;
+}
+
+#top .contents .icons .icon6 {
+  bottom: -8px;
+  right: 210px;
+}
+
+#top .contents .icons .icon7 {
+  top: 126px;
+  left: 62px;
+}
+
+#top .contents .icons .icon8 {
+  top: 96px;
+  right: 66px;
+}
+
+#top .contents .icons .icon9 {
+  top: 90px;
+  left: 460px;
+}
+
+#top .contents .button {
+  position: relative;
+}
+
+/*--------------------------------------
+ *why-connection
+ */
+
+#why-connection .stars {
+  top: 75px;
+  left: 235px;
+  width: 578px;
+  height: 238px;
+  background: url(../img/why-connection/stars.png) no-repeat;
+}
+
+#why-connection .contents {
+  padding: 176px 0 0;
+}
+
+/*---------------------------------------
+ *our-mission
+ */
+
+#our-mission .stars {
+  top: 62px;
+  left: 218px;
+  width: 613px;
+  height: 266px;
+  background: url(../img/our-mission/stars.png) no-repeat;
+}
+
+#our-mission .contents {
+  padding: 178px 0 0;
+}
+
+/*--------------------------------------
+ *visible-connection
+ */
+
+#visible-connection .stars {
+  top: 57px;
+  left: 166px;
+  width: 663px;
+  height: 305px;
+  background: url(../img/visible-connection/stars.png) no-repeat;
+}
+
+#visible-connection .contents {
+  padding: 179px 0 0;
+}
+
+/*---------------------------------------
+ *connect
+ */
+
+#connect .stars {
+  top: 107px;
+  left: -18px;
+  width: 952px;
+  height: 310px;
+  background: url(../img/connect/stars.png) no-repeat;
+}
+
+#connect .pen {
+  display: none;
+  position: absolute;
+  top: 332px;
+  left: 1016px;
+  width: 53px;
+  height: 93px;
+  background: url(../img/connect/pen.png) no-repeat;
+}
+
+#connect section h1 {
+  position: absolute;
+  top: 105px;
+  left: 50%;
+  width: 295px;
+  margin: 0 0 0 -130px;
+}
+
+#connect section ul li {
+  display: none;
+  position: absolute;
+}
+
+#connect section ul .item1 {
+  top: 149px;
+  left: 2px;
+}
+
+#connect section ul .item2 {
+  top: 182px;
+  left: 258px;
+}
+
+#connect section ul .item3 {
+  top: 168px;
+  right: 254px;
+}
+
+#connect section ul .item4 {
+  top: 149px;
+  right: 2px;
+}
+
+
+
+
+
+
+

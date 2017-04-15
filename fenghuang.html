@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	<title>BNUZ-凤凰花开</title>
+	<style type="text/css">
+		* {
+			margin:0;
+			padding:0;
+		}
+		html,body {
+			height: 100%;
+		}
+		body {
+			background: url(img/bg_blue.jpg) no-repeat;
+			background-size: cover;
+		}
+		.box{
+			width: 100%;
+			height: 100%;
+			position: relative;
+		}
+		.box .pimg{
+			position: absolute;
+			display: none;
+		}
+		.pimg:nth-child(1) {
+			top:0;
+			left:0;
+		}
+		.pimg:nth-child(2) {
+			top:0;
+			right: 0;
+		}
+		.pimg:nth-child(3) {
+			bottom: 0;
+			left:20%;
+		}
+		.pimg:nth-child(4) {
+			bottom: 0;
+			right: 10%;
+		}
+
+		.pimg:nth-child(5) {
+			bottom: 0;
+			left: 0;
+		}
+		.pimg:nth-child(6) {
+			bottom: 0;
+			left: 4%;
+		}
+		.pimg:nth-child(7) {
+			bottom: 0;
+			left: 3%;
+			z-index: 1;
+		}
+
+		.pimg:nth-child(8) {
+			bottom: 0;
+			left: 35%;
+		}
+		.pimg:nth-child(9) {
+			bottom: 0;
+			left: 50%;
+		}
+		.pimg:nth-child(10) {
+			bottom: 0;
+			left: 70%;
+		}
+		.pimg:nth-child(11) {
+			bottom: 0;
+			right: 0;
+		}
+
+		.pimg:nth-child(12) {
+			bottom: 0;
+			right: 3%;
+		}
+		.pimg:nth-child(13) {
+			bottom: 0;
+			right: 30%;
+		}
+		.pimg:nth-child(14) {
+			bottom: 1%;
+			left: 12%;
+		}
+		.pimg:nth-child(15) {
+			bottom: 0;
+			left: 30%;
+		}
+		.pimg:nth-child(16) {
+			bottom: 0;
+			left: 55%;
+		}
+		.pimg:nth-child(17) {
+			bottom: 0;
+			left: 53%;
+		}
+		.pimg:nth-child(18) {
+			bottom: 0;
+			left: 72%;
+		}
+
+		.open1 {
+			position: absolute;
+			top:25%;
+			left:60%;
+			opacity: 0;
+			animation: show 1s linear forwards 8s;
+		}
+		.open2 {
+			position: absolute;
+			top:10%;
+			left:40%;
+			opacity: 0;
+			animation: show 1s linear forwards 9s;
+		}
+		.open3 {
+			position: absolute;
+			top:40%;
+			left:35%;
+			opacity: 0;
+			animation: show 2s linear forwards 9s;
+		}
+		.open4 {
+			position: absolute;
+			top:19%;
+			left:20%;
+			opacity: 0;
+			animation: show 1s linear forwards 12s;
+		}
+		@keyframes show {
+			from{transform: scale(0);opacity: 0;}
+			to{transform: scale(1);opacity: 1;}
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<img src="img/flower13.png" alt="" class="pimg">
+		<img src="img/flower14.png" alt="" class="pimg">
+		<img src="img/flower15.png" alt="" class="pimg">
+		<img src="img/flower16.png" alt="" class="pimg">
+
+		<img src="img/flower12.png" alt="" class="pimg">
+		<img src="img/flower11.png" alt="" class="pimg">
+		<img src="img/flower10.png" alt="" class="pimg">
+
+		<img src="img/flower9.png" alt="" class="pimg">
+		<img src="img/flower8.png" alt="" class="pimg">
+		<img src="img/flower7.png" alt="" class="pimg">
+		<img src="img/flower6.png" alt="" class="pimg">
+
+		<img src="img/flower5.png" alt="" class="pimg">
+		<img src="img/flower4.png" alt="" class="pimg">
+		<img src="img/flower3.png" alt="" class="pimg">
+		<img src="img/flower2.png" alt="" class="pimg">
+		<img src="img/flower2.png" alt="" class="pimg">
+		<img src="img/flower1.png" alt="" class="pimg">
+		<img src="img/flower0.png" alt="" class="pimg">
+
+		<img src="img/open.png" alt=""   class="open1">
+		<img src="img/open1.png" alt=""  class="open2">
+		<img src="img/open2.png" alt=""  class="open3">
+		<img src="img/open3.png" alt=""  class="open4">
+	</div>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript">
+		 $(function() {
+			var pic = $(".box .pimg");
+			var i=0;
+			var timer=setInterval(function(){
+				if(i==pic.length) clearInterval(timer);
+				$(pic[i]).fadeIn("slow","linear");
+				i++;
+			},400);
+		 })
+	</script>
+</body>
+</html>
